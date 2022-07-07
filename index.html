@@ -9,9 +9,12 @@
 </head>
 <body>
     <header id="header">
-        <h3 class="logo">Clean Cruiz</h3>
+        <div class="title">
+            <h3 class="logo">Clean Cruiz</h3>
+            <img src="images/bars-solid.svg" alt="bars-solid" class="menu-icon" id="burger">
+        </div>
 
-        <nav class="nav">
+        <nav class="nav" id="navbar">
             <ul class="menu-content">
                 <li><a href="index.html" class="btn">Home</a></li>
                 <li><a href="#" class="btn">About Us</a></li>
@@ -131,5 +134,18 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        const burger = document.querySelector("#burger")
+        const menu = document.querySelector("#navbar")
+
+        burger.addEventListener('click', () => {
+            if(menu.classList.contains("nav")){
+                menu.classList.remove("nav")
+            }else{
+                menu.classList.add("nav")
+            }
+        })
+    </script>
 </body>
 </html>
